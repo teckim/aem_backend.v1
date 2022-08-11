@@ -1,0 +1,90 @@
+doctype html
+head
+  //
+    if gte mso 9xml
+    o:officedocumentsettings
+    o:allowpng
+    o:pixelsperinch 96
+  meta(content='text/html; charset=utf-8' http-equiv='Content-Type')
+  meta(content='width=device-width' name='viewport')
+  //if !mso
+    | [if !mso]
+  meta(content='IE=edge' http-equiv='X-UA-Compatible')
+  // <![endif]
+  title
+  //if !mso
+    | [if !mso]
+  link(href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
+  // <![endif]
+  style
+    include ../css/style.css
+body
+  table(width="100%" cellspacing="0" cellpadding="0" border="0")
+    tbody
+      tr
+        td(align='center')
+          include ../pug/header.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          .wrapper
+            .wrapper--inner
+              table.header(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td.header-title
+                      span
+                        | Hi 
+                        span.text-important #{name}! 
+                  tr
+                    td.header-text
+                      span 
+                        | Congrats! Now you are ready for (#{event.subject}) event
+                        br
+                        | Please 
+                        span.text-important Allow showing pictures 
+                        | to see your 
+                        span.text-important QR Code 
+                        | if not visible
+            .wrapper--inner
+              table(width='100%')
+                tbody
+                  tr
+                    td.text-center
+                      span.text-small.text-secondary You can just present the following QR Code on entry
+                  tr
+                    td
+                      table(align='center')
+                        tbody
+                          tr(align='center')
+                            td
+                              a(href='https://aemeeting.org/users/tickets' rel='noreferrer' target='_blank')
+                                img.center.fixedwidth(src="cid:ticket@cid" alt='allow showing pictures to see the QR Code' width='195')
+              table(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td
+                      .btn-container.text-center
+                        a.btn.btn-rounded(href='https://aemeeting.org/users/tickets')
+                          strong(style='color:#ffffff') SEE MY TICKETS
+                  tr
+                    td.text-small.text-secondary.text-center
+                      span 
+                        | PLEASE make sure to cancel your ticket if you can't make it.
+                        br
+                        | So others can have the chance to attend
+                  tr
+                    td.text-small.text-center
+                      | Looking forward to seeing you 😍
+            table.spacer(width='100%')
+              tbody
+                tr
+                  td(height='50px')
+            include ../pug/contact.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          include ../pug/footer.pug

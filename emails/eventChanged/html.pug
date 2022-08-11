@@ -1,0 +1,75 @@
+doctype html
+head
+  //
+    if gte mso 9xml
+    o:officedocumentsettings
+    o:allowpng
+    o:pixelsperinch 96
+  meta(content='text/html; charset=utf-8' http-equiv='Content-Type')
+  meta(content='width=device-width' name='viewport')
+  //if !mso
+    | [if !mso]
+  meta(content='IE=edge' http-equiv='X-UA-Compatible')
+  // <![endif]
+  title
+  //if !mso
+    | [if !mso]
+  link(href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
+  // <![endif]
+  style(type='text/css')
+    include ../css/style.css
+    
+body
+  table(width="100%" cellspacing="0" cellpadding="0" border="0")
+    tbody
+      tr
+        td(align='center')
+          include ../pug/header.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          .wrapper
+            .wrapper--inner
+              table.header(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td.header-title
+                      span
+                        | Hi 
+                        span.text-important #{name}!
+                  tr
+                    td.header-text
+                      span #{fields} for "#{event.subject}" event
+                      br
+                      span
+                        | has been&nbsp;
+                        span.text-important CHANGED,&nbsp;
+                        | check out below.
+            //- table.spacer(width='100%')
+            //-   tbody
+            //-     tr
+            //-       td(height='25px')
+            .wrapper--inner.text-center
+              table(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td.event--data
+                      div
+                        | We apology for the inconvenience.
+                  tr
+                    td
+                      .btn-container
+                        a.btn.btn-rounded(href='https://aemeeting.org/events/'+event._id)
+                          | See changements
+            table.spacer(width='100%')
+              tbody
+                tr
+                  td(height='25px')
+            include ../pug/contact.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          include ../pug/footer.pug

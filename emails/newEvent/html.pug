@@ -1,0 +1,120 @@
+doctype html
+head
+  //
+    if gte mso 9xml
+    o:officedocumentsettings
+    o:allowpng
+    o:pixelsperinch 96
+  meta(content='text/html; charset=utf-8' http-equiv='Content-Type')
+  meta(content='width=device-width' name='viewport')
+  //if !mso
+    | [if !mso]
+  meta(content='IE=edge' http-equiv='X-UA-Compatible')
+  // <![endif]
+  title
+  //if !mso
+    | [if !mso]
+  link(href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
+  // <![endif]
+  style(type='text/css')
+    include ../css/style.css
+
+body
+  table(width="100%" cellspacing="0" cellpadding="0" border="0")
+    tbody
+      tr
+        td(align='center')
+          include ../pug/header.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          .wrapper
+            .wrapper--inner
+              table.header(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td.header-title
+                      span
+                        | Hi 
+                        span.text-important #{name}!
+                  tr
+                    td.header-text
+                      span
+                        | Check out our fresh&nbsp;
+                        span.text-important EVENTS&nbsp;
+                        | and join us now!
+            table.spacer(width='100%')
+              tbody
+                tr
+                  td(height='25px')
+            each event in events
+              .wrapper--inner-event
+                table(width="100%" cellspacing="0" cellpadding="0" border="0")
+                  tbody
+                    tr
+                      td(colspan='2')
+                        div
+                          img(src='https://api.aemeeting.org/api/images/'+ event.image.name +'?w=300' width='100%' alt='')
+                .event-data
+                  table(width="100%" cellspacing="0" cellpadding="5" border="0")  
+                    tbody
+                      tr
+                        td.text-secondary(width="80")
+                          | Date
+                        td(height='25').text-important
+                          div
+                            | #{event.startsOn.toDateString()}
+                      tr
+                        td.text-secondary
+                          | Subject
+                        td(height='25')
+                          div
+                            | #{event.subject}
+                          span.text-secondary.text-x-small
+                            | #{event.project.name}
+                      tr
+                        td.text-secondary
+                          | Location
+                        td
+                          div 
+                            | #{event.location.name}
+                          span.text-secondary.text-x-small
+                            | #{event.location.address}
+                      if event.about
+                        tr
+                          td(colspan='2')
+                            p #{event.about}
+                      tr
+                        td(colspan='2')
+                          .btn-container
+                            a.btn(href='https://www.aemeeting.org/events/'+event._id)
+                              strong Read more &amp; Get ticket    
+              table.spacer(width='100%')
+                tbody
+                  tr
+                    td(height='25px')
+            .wrapper--inner
+              table(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td.header-text
+                      span
+                        | Not enough!
+                  tr
+                    td
+                      .btn-container.text-center
+                        a.btn.btn-rounded(href='https://aemeeting.org/events')
+                          strong(style='color:#ffffff') SEE ALL EVENTS
+            include ../pug/contact.pug
+            table.spacer(width='100%')
+              tbody
+                tr
+                  td(height='25px')
+            include ../pug/unfollow.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          include ../pug/footer.pug

@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: ltr;
+}
+table,
+td,
+tr {
+  vertical-align: top;
+  border-collapse: collapse;
+}
+* {
+  line-height: inherit;
+  font-family: Quicksand, sans-serif;
+}
+a {
+  color: #0068a5 !important;
+  text-decoration: none !important;
+}
+.logo {
+  padding: 20px 0;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.logo img {
+  margin: 0 auto;
+  text-decoration: none;
+  height: auto;
+  border: none;
+  max-width: 195px;
+  display: block;
+}
+.header {
+  text-align: center;
+  margin: auto;
+}
+.header-text {
+  padding: 10px 0;
+  text-align: center;
+  line-height: 1.5;
+  word-break: break-word;
+  font-size: 16px;
+  mso-line-height-alt: 24px;
+  margin: 0;
+}
+.header-title {
+  font-size: 34px;
+  padding: 20px 0;
+}
+.footer {
+  text-align: center;
+  margin: auto;
+  padding: 35px 16px;
+  background-color: #fff;
+}
+.wrapper {
+  padding: 0 30px;
+  background-color: #f3f3f3;
+}
+.wrapper--inner {
+  margin: auto;
+  padding: 35px 16px;
+  max-width: 490px;
+  background-color: #fff;
+}
+.wrapper--inner-event {
+  margin: auto;
+  max-width: 522px;
+  background-color: #fff;
+}
+.event-data {
+  padding: 5px 10px;
+}
+.text-secondary {
+  color: #808080;
+}
+.text-important {
+  color: #ee8b5d;
+}
+.text-x-small {
+  font-size: 12px;
+}
+.text-small {
+  font-size: 14px;
+}
+.text-regular {
+  font-size: 16px;
+}
+.text-large {
+  font-size: 18px;
+}
+.btn {
+  background-color: #ee8b5d;
+  border-radius: 5px;
+  color: #fff !important;
+  padding: 10px 20px;
+  line-height: 40px;
+}
+.btn-container {
+  padding: 10px 0;
+}
+.btn-rounded {
+  border-radius: 28px;
+}
+.spacer {
+  background-color: #f3f3f3;
+}
+img {
+  position: relative;
+}
+img[alt]:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  font-weight: 300;
+  line-height: 2;
+  text-align: center;
+  content: attr(alt);
+}
+.bordered {
+  border-radius: 20px;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+}
+.link {
+  word-break: break-word;
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+@media (max-width: 670px) {
+}

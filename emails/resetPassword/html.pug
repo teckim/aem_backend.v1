@@ -1,0 +1,74 @@
+doctype html
+head
+  //
+    if gte mso 9xml
+    o:officedocumentsettings
+    o:allowpng
+    o:pixelsperinch 96
+  meta(content='text/html; charset=utf-8' http-equiv='Content-Type')
+  meta(content='width=device-width' name='viewport')
+  //if !mso
+    | [if !mso]
+  meta(content='IE=edge' http-equiv='X-UA-Compatible')
+  // <![endif]
+  title
+  //if !mso
+    | [if !mso]
+  link(href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet')
+  // <![endif]
+  style
+    include ../css/style.css
+body
+  table(width="100%" cellspacing="0" cellpadding="0" border="0")
+    tbody
+      tr
+        td(align='center')
+          include ../pug/header.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          .wrapper
+            .wrapper--inner
+              table.header(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td.header-title
+                      span
+                        | Hi 
+                        span.text-important #{name}! 
+                  tr
+                    td.header-text
+                      span 
+                        | Forgot your password! 
+                        br
+                        |No biggie just click the button bellow to reset it
+            .wrapper--inner
+              table(width="100%" cellspacing="0" cellpadding="0" border="0")
+                tbody
+                  tr
+                    td
+                      .btn-container.text-center
+                        a.btn.btn-rounded(href=url)
+                          strong(style='color:#ffffff;') RESET MY PASSWORD
+                  tr
+                    td
+                      p.text-center
+                        span.text-secondary.text-small or by clicking the link bellow
+                  tr
+                    td(style='word-break: break-word;')
+                      div(style='max-width: 490px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word;')
+                        p.bordered(style='word-break: break-all;')
+                          a.link.text-x-small(href=url rel='noopener' target='_blank')
+                            | #{url}
+            table.spacer(width='100%')
+              tbody
+                tr
+                  td(height='50px')
+            include ../pug/contact.pug
+          table.spacer(width='100%')
+            tbody
+              tr
+                td(height='25px')
+          include ../pug/footer.pug
